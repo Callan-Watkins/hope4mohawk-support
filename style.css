@@ -1,0 +1,67 @@
+:root {
+  color-scheme: light;
+  --ink: #111111;
+  --muted: #505050;
+  --line: #d9d9d9;
+  --paper: #fdfdfc;
+  --quiet: #f2f2f0;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; padding: .65rem 1rem; background: white; z-index: 10; }
+.skip-link:focus { top: 1rem; }
+.site-header, .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.45rem clamp(1.3rem, 6vw, 6rem); }
+.site-header { border-bottom: 1px solid var(--line); }
+.wordmark { font-size: .81rem; font-weight: 800; letter-spacing: .12em; text-decoration: none; white-space: nowrap; }
+.wordmark span { display: inline-block; margin: 0 .1em; font-family: Georgia, serif; font-size: 1.14em; font-style: italic; letter-spacing: 0; }
+nav { display: flex; gap: clamp(1rem, 3vw, 2.3rem); }
+nav a { font-size: .87rem; font-weight: 650; text-decoration: none; }
+nav a[aria-current] { text-decoration: underline; text-underline-offset: .45em; text-decoration-thickness: 2px; }
+.page { width: min(100% - 2.6rem, 800px); margin: 0 auto; padding: clamp(3.2rem, 8vw, 6.5rem) 0 5rem; }
+.eyebrow { margin: 0 0 1.1rem; font-size: .75rem; font-weight: 750; letter-spacing: .18em; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 1.4rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3.2rem, 9vw, 6rem); font-weight: 500; line-height: .98; letter-spacing: -.055em; }
+h2 { margin-bottom: .85rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 500; line-height: 1.15; letter-spacing: -.035em; }
+h3 { margin-bottom: .4rem; font-size: 1.03rem; font-weight: 700; }
+.intro { max-width: 650px; margin-bottom: 3.7rem; font-size: clamp(1.13rem, 2.4vw, 1.32rem); line-height: 1.52; }
+.contact { padding: 2rem 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); }
+.contact p { max-width: 600px; color: var(--muted); }
+.email { display: inline-block; margin: .25rem 0 1.6rem; font-size: clamp(1.1rem, 3vw, 1.6rem); font-weight: 650; overflow-wrap: anywhere; }
+.email span { margin-left: .15em; font-size: .7em; }
+.contact .note { margin-bottom: 0; font-size: .85rem; }
+.help-list { padding: 3.8rem 0 1rem; }
+.help-item { display: grid; grid-template-columns: minmax(190px, 1fr) 1.55fr; gap: 1.5rem; padding: 1.45rem 0; border-top: 1px solid var(--line); }
+.help-item p { margin-bottom: 0; color: var(--muted); }
+.boundary { margin-top: 3rem; padding: 1.8rem 2rem; background: var(--quiet); border-left: 3px solid var(--ink); }
+.boundary h2 { font: 700 1rem/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+.boundary p { margin-bottom: 0; color: var(--muted); }
+.site-footer { border-top: 1px solid var(--line); font-size: .78rem; color: var(--muted); }
+.site-footer p { margin: 0; }
+.site-footer a { color: var(--ink); }
+.policy .updated { margin-bottom: 2.2rem; font-size: .82rem; color: var(--muted); }
+.policy .intro { margin-bottom: 3.8rem; }
+.policy section { padding: 2rem 0; border-top: 1px solid var(--line); }
+.policy section p { max-width: 690px; margin-bottom: 1rem; }
+.policy section p:last-child { margin-bottom: 0; }
+.policy ul { margin: .5rem 0 0; padding-left: 1.35rem; }
+.policy li { padding-left: .25rem; margin: 0 0 .95rem; }
+.policy li:last-child { margin-bottom: 0; }
+@media (max-width: 620px) {
+  body { font-size: 16px; }
+  .site-header, .site-footer { padding: 1.3rem; }
+  .help-item { grid-template-columns: 1fr; gap: .1rem; }
+  .boundary { padding: 1.5rem; }
+  .page { padding-bottom: 3rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
