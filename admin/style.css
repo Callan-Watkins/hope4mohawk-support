@@ -67,5 +67,5 @@ input::placeholder { color: #747b7d; }
 .divider { padding: 0 .35rem; color: var(--blue); }
 .site-footer a { color: var(--ink); letter-spacing: 0; }
 @media (max-width: 850px) { .page { grid-template-columns: 1fr; max-width: 650px; gap: 3.3rem; } h1 { font-size: clamp(4.2rem, 13vw, 7rem); } }
-@media (max-width: 520px) { .site-header { padding: 1.2rem 1.4rem; } .page { padding: 3.4rem 0 4.2rem; } h1 { font-size: clamp(3.7rem, 15vw, 5.1rem); } .lead { font-size: 1.1rem; } .site-footer { align-items: flex-start; flex-direction: column; line-height: 1.6; } }
+@media (max-width: 520px) { .site-header { padding: 1.2rem 1.4rem; } .page { gap: 2.2rem; padding: 3.4rem 0 4.2rem; } h1 { font-size: clamp(3.7rem, 15vw, 5.1rem); } .lead { font-size: 1.1rem; } .rule, .steps { display: none; } .site-footer { align-items: flex-start; flex-direction: column; line-height: 1.6; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
