@@ -6,7 +6,6 @@
   --white: #fff;
   --line: #d8d9d7;
   --blue: #1557b0;
-  --blue-dark: #0d3f88;
 }
 * { box-sizing: border-box; }
 html { min-height: 100%; }
@@ -27,7 +26,7 @@ button:disabled { cursor: wait; opacity: .64; }
 .page { width: min(100% - 2.8rem, 1210px); margin: auto; padding: clamp(3.4rem, 7vw, 7rem) 0; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; }
 .eyebrow, .overline { margin: 0 0 1.4rem; font-size: .72rem; font-weight: 800; letter-spacing: .17em; }
 .eyebrow { display: flex; align-items: center; gap: .65rem; }
-.dot, .signed-in-dot { width: .52rem; height: .52rem; display: inline-block; border-radius: 50%; background: var(--blue); flex: none; }
+.dot { width: .52rem; height: .52rem; display: inline-block; border-radius: 50%; background: var(--blue); flex: none; }
 h1 { margin: 0 0 1.8rem; font: 500 clamp(4.4rem, 8.5vw, 8rem)/.91 Georgia, "Times New Roman", serif; letter-spacing: -.065em; }
 h1 em { font-weight: 400; }
 .lead { max-width: 31rem; margin: 0; font-size: clamp(1.13rem, 2vw, 1.36rem); line-height: 1.52; }
@@ -44,19 +43,12 @@ h2 { margin: 0 0 .55rem; font: 500 clamp(2.1rem, 4vw, 2.9rem)/1.07 Georgia, "Tim
 label { font-size: .79rem; font-weight: 750; letter-spacing: .02em; }
 input { width: 100%; min-height: 3.1rem; border: 1px solid #9da2a3; border-radius: 0; padding: .75rem .85rem; background: #fff; color: var(--ink); }
 input::placeholder { color: #747b7d; }
-.primary-button, .secondary-button { min-height: 3.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 1px solid var(--ink); padding: .8rem 1rem; font-weight: 700; text-align: left; transition: background .15s, color .15s; }
+.primary-button { min-height: 3.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 1px solid var(--ink); padding: .8rem 1rem; font-weight: 700; text-align: left; transition: background .15s, color .15s; }
 .primary-button { width: 100%; margin-top: .25rem; background: var(--ink); color: white; }
 .primary-button:hover:not(:disabled) { background: #2b2e2e; }
-.secondary-button { background: white; color: var(--ink); }
-.secondary-button:hover:not(:disabled) { background: var(--paper); }
-.security-note, .small-copy { color: var(--muted); font-size: .83rem; line-height: 1.58; }
+.security-note { color: var(--muted); font-size: .83rem; line-height: 1.58; }
 .security-note { margin: 1.5rem 0 0; }
 .security-note strong { color: var(--ink); }
-.verify-panel { border-top: 1px solid var(--line); margin-top: 1.5rem; padding-top: 1.15rem; }
-.small-copy { margin: 0 0 1.1rem; }
-.signed-in { display: flex; align-items: center; gap: .6rem; margin-bottom: 1.5rem; font-size: .84rem; font-weight: 650; }
-.signed-in-dot { background: #27916b; }
-.signed-in button { margin-left: auto; border: 0; padding: .2rem 0; background: transparent; color: var(--muted); font-size: .83rem; text-decoration: underline; text-underline-offset: .2em; }
 .code-panel { margin-top: 1.5rem; border: 1px solid var(--line); padding: 1.25rem; background: var(--paper); }
 .code-panel .overline { margin-bottom: .5rem; color: var(--muted); font-size: .65rem; }
 #code { display: block; overflow-wrap: anywhere; font: 700 clamp(2rem, 5vw, 3rem)/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .11em; }
