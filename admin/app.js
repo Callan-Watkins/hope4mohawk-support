@@ -6,6 +6,19 @@ const $ = (id) => document.getElementById(id);
 
 let expiresAt = 0;
 let countdownInterval = null;
+let nextGenerationAt = 0;
+let cooldownInterval = null;
+
+function updateGenerateButton() {
+  const seconds = Math.max(0, Math.ceil((nextGenerationAt - Date.now()) / 1000));
+  const button = $("generate-button");
+  button.disabled = seconds > 0;
+  button.textContent = seconds > 0 ? `Generate another in ${seconds}s` : "Generate admin code →";
+  if (!seconds && cooldownInterval) {
+    clearInterval(cooldownInterval);
+    cooldownInterval = null;
+  }
+}
 
 function setStatus(message, isError = false) {
   $("status").textContent = message;
@@ -32,6 +45,7 @@ function updateCountdown() {
 
 $("pin-form").addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (Date.now() < nextGenerationAt) return;
   const pin = $("pin").value;
   if (!/^\d{4}$/.test(pin)) {
     setStatus("Enter the four-digit organizer PIN.", true);
@@ -45,6 +59,7 @@ $("pin-form").addEventListener("submit", async (event) => {
     const response = await fetch(`${supabaseUrl}/functions/v1/issue-admin-code-pin`, {
       method: "POST",
       cache: "no-store",
+      signal: AbortSignal.timeout(15000),
       headers: { "Content-Type": "application/json", "apikey": publishableKey },
       body: JSON.stringify({ pin }),
     });
@@ -55,11 +70,13 @@ $("pin-form").addEventListener("submit", async (event) => {
       error.status = response.status;
       throw error;
     }
-    if (!/^[A-Z2-9]{8}$/.test(result.code) || !result.expires_at) {
+    const expiration = Date.parse(result.expires_at);
+    if (!/^[A-Z2-9]{8}$/.test(result.code) || !Number.isFinite(expiration) || expiration <= Date.now()) {
       throw new Error("Invalid issuer response");
     }
 
-    expiresAt = Date.parse(result.expires_at);
+    expiresAt = expiration;
+    nextGenerationAt = Date.now() + 45000;
     $("code").textContent = result.code;
     $("copy-button").disabled = false;
     $("copy-button").textContent = "Copy code";
@@ -69,18 +86,21 @@ $("pin-form").addEventListener("submit", async (event) => {
     if (countdownInterval) clearInterval(countdownInterval);
     updateCountdown();
     countdownInterval = setInterval(updateCountdown, 1000);
+    if (cooldownInterval) clearInterval(cooldownInterval);
+    cooldownInterval = setInterval(updateGenerateButton, 1000);
   } catch (error) {
     if (error.status === 403) {
       $("pin").value = "";
       $("pin").focus();
       setStatus("Incorrect PIN or temporarily locked. Check it before trying again.", true);
     } else if (error.status === 429) {
-      setStatus("Please wait before generating another code. Existing unused codes may still work.", true);
+      setStatus("Wait 45 seconds between codes. You can have three unused codes at once and generate six per hour. Use an existing code or try again later.", true);
     } else {
       setStatus("Could not generate a code right now. Please try again.", true);
     }
   } finally {
     setBusy(button, false);
+    updateGenerateButton();
   }
 });
 
