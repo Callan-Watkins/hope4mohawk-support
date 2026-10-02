@@ -8,6 +8,14 @@ let expiresAt = 0;
 let countdownInterval = null;
 let nextGenerationAt = 0;
 let cooldownInterval = null;
+const isLocalFile = location.protocol === "file:";
+
+if (isLocalFile) {
+  setStatus("This is a local preview. Open the live website below to generate admin codes.", true);
+  $("hosted-site-note").hidden = false;
+  $("generate-button").disabled = true;
+  $("pin").disabled = true;
+}
 
 function updateGenerateButton() {
   const seconds = Math.max(0, Math.ceil((nextGenerationAt - Date.now()) / 1000));
@@ -45,6 +53,7 @@ function updateCountdown() {
 
 $("pin-form").addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (isLocalFile) return;
   if (Date.now() < nextGenerationAt) return;
   const pin = $("pin").value;
   if (!/^\d{4}$/.test(pin)) {
@@ -95,6 +104,10 @@ $("pin-form").addEventListener("submit", async (event) => {
       setStatus("Incorrect PIN or temporarily locked. Check it before trying again.", true);
     } else if (error.status === 429) {
       setStatus("Wait 45 seconds between codes. You can have three unused codes at once and generate six per hour. Use an existing code or try again later.", true);
+    } else if (error.name === "TimeoutError" || error.name === "AbortError") {
+      setStatus("The server took too long to respond. Check your connection and try again in 45 seconds.", true);
+    } else if (error instanceof TypeError) {
+      setStatus("Your browser could not connect to the code server. Check your connection and any content blockers, then try again.", true);
     } else {
       setStatus("Could not generate a code right now. Please try again.", true);
     }
