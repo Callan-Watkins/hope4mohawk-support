@@ -91,6 +91,8 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0) scale(.98); }
 .btn-sm { padding: .6rem 1.05rem; font-size: .9rem; }
+.btn { white-space: nowrap; flex-shrink: 0; }
+.brand { min-width: 0; overflow: hidden; }
 .store, .store-badge { background: var(--ink); color: var(--bg); }
 .store-badge { padding: .8rem 1.5rem .8rem 1.15rem; box-shadow: 0 10px 40px -10px var(--glow); }
 .store-badge svg { width: 26px; height: 26px; }
@@ -373,6 +375,7 @@ html[data-look="clean"] .final-logo, html[data-look="glass"] .final-logo { filte
   .foot { grid-template-columns: 1fr; }
   .cta-row .btn { width: 100%; }
 }
+@media (max-width: 400px) { .brand span { display: none; } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
