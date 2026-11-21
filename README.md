@@ -1,6 +1,6 @@
 # Hope 4 Mohawk support site
 
-Static public support and privacy pages for the Hope 4 Mohawk app, plus a PIN-gated admin-code page. GitHub Pages publishes the `main` branch root. The support/privacy pages have no JavaScript or tracking. The admin page has small first-party JavaScript and connects only to this club's Supabase project.
+Static public support and privacy pages for the Hope 4 Mohawk app, plus a PIN-gated admin-code page. GitHub Pages publishes the `main` branch root. The home page (landing + support) uses one small first-party script (`site.js`) for animations and the look/icon demos; no third-party requests, analytics or tracking. Privacy and delete-account pages have no JavaScript. The admin page has small first-party JavaScript and connects only to this club's Supabase project.
 
 - Support: `https://callan-watkins.github.io/hope4mohawk-support/`
 - Privacy: `https://callan-watkins.github.io/hope4mohawk-support/privacy.html`

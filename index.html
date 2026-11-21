@@ -1,66 +1,358 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-look="classic">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <meta name="description" content="Support and contact information for Hope 4 Mohawk, a small student club app.">
-  <title>Support · Hope 4 Mohawk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hope 4 Mohawk · Your club, one app</title>
+  <meta name="description" content="Hope 4 Mohawk is the free student club app for news, gatherings, the club calendar and the whole Bible offline. No email, no password, no ads. On iPhone and iPad.">
+  <meta name="apple-itunes-app" content="app-id=6815902570">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hope 4 Mohawk · Your club, one app">
+  <meta property="og:description" content="News, gatherings and Scripture from your club leaders, all in one place. Free on iPhone and iPad.">
+  <meta property="og:url" content="https://callan-watkins.github.io/hope4mohawk-support/">
+  <meta property="og:image" content="https://callan-watkins.github.io/hope4mohawk-support/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" href="assets/icons/Classic.webp">
+  <link rel="preload" href="assets/ArchivoBlack.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="site.css">
+  <script>try{var l=localStorage.getItem('h4m-look');if(l)document.documentElement.dataset.look=l}catch(e){}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MobileApplication","name":"Hope 4 Mohawk","operatingSystem":"iOS, iPadOS","applicationCategory":"LifestyleApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://apps.apple.com/us/app/hope-4-mohawk/id6815902570"}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="wordmark" href="./" aria-label="Hope 4 Mohawk home">HOPE <span>4</span> MOHAWK</a>
-    <nav aria-label="Site navigation">
-      <a href="./" aria-current="page">Support</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Hope 4 Mohawk, back to top">
+      <img src="assets/icons/Classic.webp" alt="" width="34" height="34">
+      <span>HOPE <b>4</b> MOHAWK</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#features">Inside</a>
+      <a href="#looks">Looks</a>
+      <a href="#faq">FAQ</a>
+      <a href="#support">Support</a>
+    </nav>
+    <a class="btn btn-sm store" href="https://apps.apple.com/us/app/hope-4-mohawk/id6815902570">Get the app</a>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="dot"></span> The Hope 4 Mohawk club app</p>
+        <h1 class="mega reveal">Your club.<br><em>One</em> app.</h1>
+        <p class="lede reveal">News, gatherings and Scripture from your club leaders, all in one place. Free on iPhone and iPad. No email, no password, no ads.</p>
+        <div class="cta-row reveal">
+          <a class="btn store-badge" href="https://apps.apple.com/us/app/hope-4-mohawk/id6815902570">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <a class="btn ghost" href="#features">See what's inside</a>
+        </div>
+        <div class="qr-card reveal">
+          <img src="assets/qr.png" alt="QR code that opens Hope 4 Mohawk on the App Store" width="92" height="92">
+          <p><b>On a computer?</b><br>Point your iPhone camera here to get the app.</p>
+        </div>
+      </div>
+
+      <div class="hero-stage" aria-hidden="true">
+        <div class="ring"></div>
+        <div class="phone tilt" data-tilt>
+          <img src="assets/shots/home-light.webp" alt="" width="600" height="1305">
+        </div>
+        <div class="float f1 card-count"><small>Next up</small><strong>2</strong><span>days to go</span><em>Friday night gathering</em></div>
+        <div class="float f2 chip"><span class="tick">✓</span> Added to Apple Calendar</div>
+        <div class="float f3 chip streak"><span class="flame"></span> 5-day reading streak</div>
+        <div class="sticker">Free · No ads</div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Never miss a gathering</span><span>The whole Bible, offline</span><span>Join in seconds</span><span>Photos from your leaders</span><span>Synced to Apple Calendar</span><span>Widgets</span>
+        <span>Never miss a gathering</span><span>The whole Bible, offline</span><span>Join in seconds</span><span>Photos from your leaders</span><span>Synced to Apple Calendar</span><span>Widgets</span>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="At a glance">
+      <div class="stat reveal"><b data-count="66">66</b><span>books of the Bible, readable with no signal</span></div>
+      <div class="stat reveal"><b data-count="10">10</b><span>seconds to join: one question and your first name</span></div>
+      <div class="stat reveal"><b>0</b><span>emails, passwords, ads or trackers</span></div>
+      <div class="stat reveal"><b data-count="5">5</b><span>looks to make it yours <i class="soon">1.3</i></span></div>
+    </section>
+
+    <!-- FEATURES: sticky phone + chapters -->
+    <section class="features" id="features">
+      <div class="section-head reveal">
+        <p class="eyebrow">What's inside</p>
+        <h2 class="big">Everything the club does.<br><em>In your pocket.</em></h2>
+      </div>
+
+      <div class="story">
+        <div class="story-phone" aria-hidden="true">
+          <div class="phone">
+            <img class="shot is-on" data-shot="0" src="assets/shots/home-light.webp" alt="" width="600" height="1305">
+            <img class="shot" data-shot="1" src="assets/shots/calendar-dark.webp" alt="" width="600" height="1305" loading="lazy">
+            <img class="shot" data-shot="2" src="assets/shots/event-light.webp" alt="" width="600" height="1305" loading="lazy">
+            <img class="shot" data-shot="3" src="assets/shots/bible-light.webp" alt="" width="600" height="1305" loading="lazy">
+            <img class="shot" data-shot="4" src="assets/shots/reader-dark.webp" alt="" width="600" height="1305" loading="lazy">
+          </div>
+          <ol class="story-dots"><li class="is-on"></li><li></li><li></li><li></li><li></li></ol>
+        </div>
+
+        <div class="chapters">
+          <article class="chapter" data-step="0">
+            <span class="num">01</span>
+            <h3>Home: what's new, at a glance.</h3>
+            <p>The latest posts from your club leaders, a countdown to the next gathering, and a verse for the day. Search every old post from the bar at the top.</p>
+            <img class="inline-shot" src="assets/shots/home-light.webp" alt="The Home tab showing a greeting, a search bar, the next gathering and a post from club leaders" loading="lazy" width="600" height="1305">
+          </article>
+          <article class="chapter" data-step="1">
+            <span class="num">02</span>
+            <h3>A real club calendar.</h3>
+            <p>Every gathering and event in one place, with the time, room and details. Leaders add events in seconds, and everyone sees them right away.</p>
+            <img class="inline-shot" src="assets/shots/calendar-dark.webp" alt="The Calendar tab in dark mode with a month grid and upcoming events" loading="lazy" width="600" height="1305">
+          </article>
+          <article class="chapter" data-step="2">
+            <span class="num">03</span>
+            <h3>Already in your Apple Calendar.</h3>
+            <p>Turn it on once. New events, changes and cancellations show up in Apple Calendar by themselves, plus a reminder on gathering day. Google Calendar and Outlook work too.</p>
+            <img class="inline-shot" src="assets/shots/event-light.webp" alt="An event page for Friday night gathering with an Add to my calendar button" loading="lazy" width="600" height="1305">
+          </article>
+          <article class="chapter" data-step="3">
+            <span class="num">04</span>
+            <h3>The whole Bible. Offline.</h3>
+            <p>All 66 books of the World English Bible, searchable, with no signal needed. Pick up where you left off, keep a reading streak and save the verses you love.</p>
+            <img class="inline-shot" src="assets/shots/bible-light.webp" alt="The Bible tab listing books with a search bar" loading="lazy" width="600" height="1305">
+          </article>
+          <article class="chapter" data-step="4">
+            <span class="num">05</span>
+            <h3>Tap a verse. Read it.</h3>
+            <p>When a leader mentions a verse in a post, tap it and it opens right in the Bible. Try it:</p>
+            <div class="verse-demo">
+              <div class="verse-chips" role="tablist" aria-label="Sample verses">
+                <button role="tab" aria-selected="true" data-ref="0">John 3:16</button>
+                <button role="tab" aria-selected="false" data-ref="1">Romans 12:12</button>
+                <button role="tab" aria-selected="false" data-ref="2">Psalm 23:1</button>
+                <button role="tab" aria-selected="false" data-ref="3">Philippians 4:13</button>
+              </div>
+              <blockquote class="verse-out" aria-live="polite">
+                <p>For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life.</p>
+                <cite>John 3:16 · World English Bible</cite>
+              </blockquote>
+            </div>
+            <img class="inline-shot" src="assets/shots/reader-dark.webp" alt="The Bible reader showing Romans 12 in dark mode" loading="lazy" width="600" height="1305">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIDGETS + PHOTOS bento -->
+    <section class="bento" id="more">
+      <div class="section-head reveal">
+        <p class="eyebrow">And a lot more</p>
+        <h2 class="big">Small things.<br><em>Big difference.</em></h2>
+      </div>
+      <div class="grid">
+        <div class="tile t-widget reveal">
+          <div class="widget w-next">
+            <small>NEXT GATHERING</small>
+            <strong>Friday night gathering</strong>
+            <span>Fri · 7:00 PM</span>
+            <span class="room">Room 112</span>
+          </div>
+          <div class="widget w-verse">
+            <small>VERSE OF THE DAY</small>
+            <p>“Rejoicing in hope; enduring in troubles; continuing steadfastly in prayer.”</p>
+            <span>Romans 12:12</span>
+          </div>
+          <div class="lock" aria-hidden="true"><span class="lock-date">Friday · gathering day</span><span class="lock-time">9:41</span><span class="lock-widget"><b>2d</b>Friday night gathering · 7:00 PM</span></div>
+          <h3>Home and Lock Screen widgets</h3>
+          <p>Your next gathering and a verse of the day, without opening the app.</p>
+        </div>
+        <div class="tile t-photos reveal">
+          <div class="photo-stack" aria-hidden="true"><i></i><i></i><i></i></div>
+          <h3>Photos in posts</h3>
+          <p>Leaders can add up to six photos to a post. Tap one to see it full screen.</p>
+        </div>
+        <div class="tile t-notify reveal">
+          <div class="notif" aria-hidden="true">
+            <img src="assets/icons/Classic.webp" alt="" width="38" height="38">
+            <div><b>Hope 4 Mohawk</b><span>Tonight: Friday night gathering, 7:00 PM in Room 112</span></div>
+            <time>now</time>
+          </div>
+          <h3>Gathering-day reminders</h3>
+          <p>A heads-up a couple of hours before, and a ping when leaders post something new. You choose what you get.</p>
+        </div>
+        <div class="tile t-roles reveal">
+          <div class="role-toggle" role="group" aria-label="Show the home feed for">
+            <button aria-pressed="true" data-role="student">Student</button>
+            <button aria-pressed="false" data-role="parent">Parent</button>
+          </div>
+          <ul class="role-out" aria-live="polite">
+            <li>Keep your 5-day streak: read John 4 today</li>
+            <li>Next up: Friday night gathering in 2 days</li>
+            <li>Latest from your leaders</li>
+          </ul>
+          <h3>Made for students <em>and</em> parents <i class="soon">1.3</i></h3>
+          <p>Students get streak nudges. Parents get the full list of what's coming up.</p>
+        </div>
+        <div class="tile t-ipad reveal">
+          <div class="devices" aria-hidden="true"><span class="ipad"></span><span class="iphone"></span></div>
+          <h3>iPhone and iPad</h3>
+          <p>A layout built for both, in light or dark mode.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOKS -->
+    <section class="looks" id="looks">
+      <div class="looks-copy">
+        <p class="eyebrow">Make it yours <i class="soon">Coming in 1.3</i></p>
+        <h2 class="big">Five looks.<br><em>Try them here.</em></h2>
+        <p class="lede">Pick a look and this whole page changes, just like the app does.</p>
+        <div class="look-picker" role="radiogroup" aria-label="Choose a look">
+          <button role="radio" data-look="classic" aria-checked="true"><span class="sw sw-classic"></span><b>Classic</b><small>Black, white and club red</small></button>
+          <button role="radio" data-look="clean" aria-checked="false"><span class="sw sw-clean"></span><b>Clean</b><small>Soft grey, white cards</small></button>
+          <button role="radio" data-look="bold" aria-checked="false"><span class="sw sw-bold"></span><b>Bold</b><small>Cobalt and yellow</small></button>
+          <button role="radio" data-look="moody" aria-checked="false"><span class="sw sw-moody"></span><b>Moody</b><small>Near-black with an ember glow</small></button>
+          <button role="radio" data-look="glass" aria-checked="false"><span class="sw sw-glass"></span><b>Glass</b><small>Frosted cards, warm blur</small></button>
+        </div>
+      </div>
+      <div class="looks-phone">
+        <div class="phone">
+          <img class="look-shot is-on" data-for="classic" src="assets/shots/look-classic.webp" alt="Home in the Classic look" width="600" height="1305" loading="lazy">
+          <img class="look-shot" data-for="clean" src="assets/shots/look-clean.webp" alt="Home in the Clean look" width="600" height="1305" loading="lazy">
+          <img class="look-shot" data-for="bold" src="assets/shots/look-bold.webp" alt="Home in the Bold look" width="600" height="1305" loading="lazy">
+          <img class="look-shot" data-for="moody" src="assets/shots/look-moody.webp" alt="Home in the Moody look" width="600" height="1305" loading="lazy">
+          <img class="look-shot" data-for="glass" src="assets/shots/look-glass.webp" alt="Home in the Glass look" width="600" height="1305" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ICONS -->
+    <section class="icons" id="icons">
+      <div class="section-head reveal">
+        <p class="eyebrow">Seven app icons <i class="soon">Coming in 1.3</i></p>
+        <h2 class="big">Pick your icon.</h2>
+      </div>
+      <div class="icon-stage">
+        <div class="homescreen" aria-hidden="true">
+          <div class="hs-grid">
+            <i></i><i></i><i></i><i></i>
+            <i></i><span class="hs-app"><img id="hsIcon" src="assets/icons/Classic.webp" alt="" width="256" height="256"><small>Hope 4 Mohawk</small></span><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+        <div class="icon-row" role="radiogroup" aria-label="App icons">
+          <button role="radio" aria-checked="true" data-icon="Classic"><img src="assets/icons/Classic.webp" alt="" width="256" height="256"><span>Classic</span></button>
+          <button role="radio" aria-checked="false" data-icon="Ember"><img src="assets/icons/Ember.webp" alt="" width="256" height="256"><span>Ember</span></button>
+          <button role="radio" aria-checked="false" data-icon="Cobalt"><img src="assets/icons/Cobalt.webp" alt="" width="256" height="256"><span>Cobalt</span></button>
+          <button role="radio" aria-checked="false" data-icon="Paper"><img src="assets/icons/Paper.webp" alt="" width="256" height="256"><span>Paper</span></button>
+          <button role="radio" aria-checked="false" data-icon="Glass"><img src="assets/icons/Glass.webp" alt="" width="256" height="256"><span>Glass</span></button>
+          <button role="radio" aria-checked="false" data-icon="H4MRed"><img src="assets/icons/H4MRed.webp" alt="" width="256" height="256"><span>H4M Red</span></button>
+          <button role="radio" aria-checked="false" data-icon="H4MNight"><img src="assets/icons/H4MNight.webp" alt="" width="256" height="256"><span>H4M Night</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section class="join" id="join">
+      <div class="section-head reveal">
+        <p class="eyebrow">Getting started</p>
+        <h2 class="big">Join in <em>seconds.</em></h2>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span>1</span><h3>Get the app</h3><p>Free on the App Store for iPhone and iPad.</p></li>
+        <li class="reveal"><span>2</span><h3>Answer one question</h3><p>A quick club question shows you're part of Hope 4 Mohawk.</p></li>
+        <li class="reveal"><span>3</span><h3>Add your first name</h3><p>That's it. No email, no password, no account to remember.</p></li>
+      </ol>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="privacy-band">
+      <div class="reveal">
+        <p class="eyebrow">Private by design</p>
+        <h2 class="big">No email.<br>No password.<br><em>No ads.</em></h2>
+      </div>
+      <ul class="checks reveal">
+        <li>No tracking and no analytics.</li>
+        <li>Your reading progress and saved verses stay on your phone.</li>
+        <li>Calendar sync only touches its own "Hope 4 Mohawk" calendar.</li>
+        <li>Delete your account and data any time from Settings.</li>
+      </ul>
+      <a class="text-link reveal" href="privacy.html">Read the privacy policy →</a>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="section-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="big">Questions, answered.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="reveal"><summary>Is it free?</summary><p>Yes. There are no ads, purchases or subscriptions.</p></details>
+        <details class="reveal"><summary>Is there an Android version?</summary><p>The app is on iPhone and iPad today. An Android version is in the works.</p></details>
+        <details class="reveal"><summary>How do I get club events in my calendar?</summary><p>Open the Calendar tab and tap <b>Add to Apple Calendar</b>, then allow access. The app keeps its own "Hope 4 Mohawk" calendar up to date. You can turn it off in Settings any time.</p></details>
+        <details class="reveal"><summary>How do I change my name?</summary><p>In the app, open Settings → Name.</p></details>
+        <details class="reveal"><summary>How do I turn notifications on or off?</summary><p>Settings → Stay in the loop. You can also change them in the iPhone Settings app under Hope 4 Mohawk.</p></details>
+        <details class="reveal"><summary>How do I delete my account?</summary><p>Open Settings → Your data → Delete my account and data. If that doesn't work, <a href="delete-account.html">see the full steps</a> or email us.</p></details>
+        <details class="reveal"><summary>My admin code expired.</summary><p>Admin codes can be used once and expire after ten minutes. Ask the club organizer for a new code. Don't send the code by email.</p></details>
+        <details class="reveal"><summary>A post is wrong or concerning.</summary><p>Email the post title and explain the issue. A club organizer can edit, unpin or remove it.</p></details>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="support" id="support">
+      <div class="support-card reveal">
+        <p class="eyebrow">Support</p>
+        <h2 class="big">Here to help.</h2>
+        <p>For app problems, privacy requests, or a concern about a club post, email the club organizer:</p>
+        <div class="mail-row">
+          <a class="mail" href="mailto:callans.creations1@gmail.com?subject=Hope%204%20Mohawk%20app%20support">callans.creations1@gmail.com</a>
+          <button class="btn ghost btn-sm" type="button" data-copy="callans.creations1@gmail.com">Copy</button>
+        </div>
+        <p class="note">Please don't include passwords, admin codes, or private student details in your message.</p>
+      </div>
+      <aside class="urgent reveal">
+        <h3>For urgent help</h3>
+        <p>This app and email are not emergency channels. For an immediate safety concern, use your school's established reporting process or local emergency services.</p>
+      </aside>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="final-inner reveal">
+        <img class="final-logo" src="assets/logo.webp" alt="Hope 4 Mohawk club logo" width="700" height="560" loading="lazy">
+        <h2 class="mega">See you<br>at <em>gathering.</em></h2>
+        <a class="btn store-badge" href="https://apps.apple.com/us/app/hope-4-mohawk/id6815902570">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-brand"><span>HOPE <b>4</b> MOHAWK</span><p>A student club app.</p></div>
+    <nav aria-label="Footer">
+      <a href="https://apps.apple.com/us/app/hope-4-mohawk/id6815902570">App Store</a>
+      <a href="#support">Support</a>
       <a href="privacy.html">Privacy</a>
       <a href="delete-account.html">Delete account</a>
     </nav>
-  </header>
-
-  <main id="main" class="page">
-    <p class="eyebrow">STUDENT CLUB · APP SUPPORT</p>
-    <h1>Here to help.</h1>
-    <p class="intro">Hope 4 Mohawk is a small student club app for updates, gatherings, ways to serve, and Scripture. If something is wrong or you have a question, contact the club organizer.</p>
-
-    <section class="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Get in touch</h2>
-      <p>For app problems, privacy requests, or a concern about a club post:</p>
-      <a class="email" href="mailto:callans.creations1@gmail.com?subject=Hope%204%20Mohawk%20app%20support">callans.creations1@gmail.com <span aria-hidden="true">↗</span></a>
-      <p class="note">Please don’t include passwords, admin codes, or private student details in your message.</p>
-    </section>
-
-    <section class="help-list" aria-labelledby="common-title">
-      <h2 id="common-title">Common questions</h2>
-      <div class="help-item">
-        <h3>How do I change my name?</h3>
-        <p>In the app, open Settings → Name.</p>
-      </div>
-      <div class="help-item">
-        <h3>How do I delete my account?</h3>
-        <p>Open Settings → Your data → Delete my account and data. If that does not work, email us and describe the problem.</p>
-      </div>
-      <div class="help-item">
-        <h3>My admin code expired.</h3>
-        <p>Admin codes can be used once and expire after ten minutes. Ask the club organizer for a new code. Do not send the code by email.</p>
-      </div>
-      <div class="help-item">
-        <h3>A post is inaccurate or concerning.</h3>
-        <p>Email the link or post title and explain the issue. A club organizer can edit, unpin, or remove it.</p>
-      </div>
-    </section>
-
-    <aside class="boundary">
-      <h2>For urgent help</h2>
-      <p>This app and email are not emergency channels. For an immediate safety concern, use your school’s established reporting process or local emergency services.</p>
-    </aside>
-  </main>
-
-  <footer class="site-footer">
-    <p>Hope 4 Mohawk · A small student club</p>
-    <a href="privacy.html">Privacy policy</a>
+    <p class="fine">Scripture from the World English Bible (public domain). Apple Calendar, iPhone and iPad are trademarks of Apple Inc.</p>
   </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="site.js" defer></script>
 </body>
 </html>
